@@ -1,0 +1,45 @@
+<%= form_for(@run) do |f| %>
+  <% if @run.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@run.errors.count, "error") %> prohibited this run from being saved:</h2>
+
+      <ul>
+      <% @run.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :run_id %><br>
+    <%= f.text_field :run_id %>
+  </div>
+  <div class="field">
+    <%= f.label :route_id %><br>
+    <%= f.text_field :route_id %>
+  </div>
+  <div class="field">
+    <%= f.label :member_id %><br>
+    <%= f.text_field :member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :run_date %><br>
+    <%= f.datetime_select :run_date %>
+  </div>
+  <div class="field">
+    <%= f.label :time_taken %><br>
+    <%= f.number_field :time_taken %>
+  </div>
+  <div class="field">
+    <%= f.label :am_pm %><br>
+    <%= f.text_field :am_pm %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<%= form_for(@subscription_payment) do |f| %>
+  <% if @subscription_payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subscription_payment.errors.count, "error") %> prohibited this subscription_payment from being saved:</h2>
+
+      <ul>
+      <% @subscription_payment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subscription_payment_id %><br>
+    <%= f.text_field :subscription_payment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_id %><br>
+    <%= f.text_field :subscription_id %>
+  </div>
+  <div class="field">
+    <%= f.label :amount_paid %><br>
+    <%= f.text_field :amount_paid %>
+  </div>
+  <div class="field">
+    <%= f.label :date_paid %><br>
+    <%= f.datetime_select :date_paid %>
+  </div>
+  <div class="field">
+    <%= f.label :good_till %><br>
+    <%= f.datetime_select :good_till %>
+  </div>
+  <div class="field">
+    <%= f.label :paypal %><br>
+    <%= f.check_box :paypal %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,167 @@
+<body>
+
+<header>
+<style media='screen' type='text/css'>
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 3px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table-zebra tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+.zui-table-zebra tbody tr:nth-child(even) {
+    background-color: #EEF7EE;
+}
+.zui-table-horizontal tbody td {
+    border-left: none;
+    border-right: none;
+}
+.headingLine { 
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+ 
+.formLine { 
+    display: block;
+    width:"33%";	
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    //margin-left: auto;
+    //margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+
+header {
+    background-color:#996633;
+    font-weight:bolder;
+    color:white;
+    text-align:center;
+    padding:5px; 
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: white;
+    margin: 0px 0px 10px 10px
+}
+
+nav {
+    line-height:40px;
+    background-color:#DCDCDC;
+    height:600px;
+    width:210px;
+    float:left;
+    padding:3px;
+    border: 2px;
+    border-radius: 15px;
+    margin: 0px 10px 10px 10px; 
+}
+
+nav a {
+  color:black;
+  text-color:blue;
+  font-weight:bolder;	
+  background-color:#E6EBE6;
+  border-radius: 5px;
+  text-decoration: none;
+  padding:4px;
+}
+
+section {
+    width:900px;
+    float:left;
+    padding:10px; 
+   text-align:justify;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+</style>
+<h1>Boy Scouts</h1>
+</header>
+<nav>
+Index<br>
+<!-- <%= link_to "RUNS", :controller => :runs, :action => :index%><br> -->
+<a href="/">HOME</a><br>
+<a href="/admin">ADMIN</a><br>
+<a href="/admin/subscription_payment/new">RECORD NEW PAYMENT</a>
+<a href="/routes/downloadPDFForRunSheets">DOWNLOAD ALL RUN-SHEETS</a>
+</nav>
+
+<section>
+<h1>RUN SHEETS<h1>
+<hr class="headingLine">
+<% @routesHash.each_key do |key|%>
+<p class="p1">Route :<%= key%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to "    Download PDF",{:controller =>'routes', :action => 'generatePDFForRunSheets', :route => key, :format => :pdf, :filename => "Route_#{key}_RunSheet.pdf"}, target: '_blank' %>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to  "Download CSV", {:controller=>'routes', :action=>"generateCSVForRunSheets", :route=>"#{key}"}%> </p>
+<!-- <p class="p1"> Morning Drive : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Evening Driver :                  </p>
+<p class="p1">Morning start time :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                          Evening start time :            </p>-->
+	<table class="zui-table zui-table-zebra zui-table-horizontal">
+  <thead>
+    <tr>
+      <th>Seq</th>
+      <th>Status</th>
+      <th>Street</th>
+      <th>#</th>
+      <th>Holder?</th>
+      <th>Name</th>
+      <th>Service Notes</th>
+      <th>ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routesHash[key].each do |subs| %>
+      <tr>
+        <td><%= subs.run_sequence %></td>
+        <td><%= subs.subscription_status %></td>
+        <td><%= subs.street %></td>
+        <td><%= subs.qty %></td>
+        <td><%= ""%></td>
+        <td><%= subs.last_name%></td>
+        <td><%= subs.subscription_notes%></td>
+        <td><%= subs.subscription_id%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<!--<p class="p1">Morning end time : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                       Evening end time :            </p>
+<p class="p1">Morning Scouts(List on back)  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                    Evening Scouts(List on back)</p>-->
+<br>
+<hr class="headingLine">
+<%end%>
+
+</section>
+
+<footer>
+Copyright © TeamFirefox
+</footer>
+
+</body>
+

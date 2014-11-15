@@ -1,0 +1,121 @@
+<%= form_for(@subscription) do |f| %>
+  <% if @subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+      <ul>
+      <% @subscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subscription_id %><br>
+    <%= f.text_field :subscription_id %>
+  </div>
+  <div class="field">
+    <%= f.label :route_id %><br>
+    <%= f.text_field :route_id %>
+  </div>
+  <div class="field">
+    <%= f.label :run_sequence %><br>
+    <%= f.number_field :run_sequence %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :qty %><br>
+    <%= f.number_field :qty %>
+  </div>
+  <div class="field">
+    <%= f.label :qty_comp %><br>
+    <%= f.number_field :qty_comp %>
+  </div>
+  <div class="field">
+    <%= f.label :service_notes %><br>
+    <%= f.text_area :service_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :started_date %><br>
+    <%= f.datetime_select :started_date %>
+  </div>
+  <div class="field">
+    <%= f.label :last_letter_sent_date %><br>
+    <%= f.datetime_select :last_letter_sent_date %>
+  </div>
+  <div class="field">
+    <%= f.label :renewal_x0020_grp %><br>
+    <%= f.text_field :renewal_x0020_grp %>
+  </div>
+  <div class="field">
+    <%= f.label :sold_x0020_By %><br>
+    <%= f.text_field :sold_x0020_By %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_amount %><br>
+    <%= f.text_field :subscription_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :maint %><br>
+    <%= f.text_field :maint %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_notes %><br>
+    <%= f.text_area :subscription_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :renewal_due_date %><br>
+    <%= f.datetime_select :renewal_due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_status %><br>
+    <%= f.text_field :subscription_status %>
+  </div>
+  <div class="field">
+    <%= f.label :alternative_invoice %><br>
+    <%= f.number_field :alternative_invoice %>
+  </div>
+  <div class="field">
+    <%= f.label :map_date %><br>
+    <%= f.datetime_select :map_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

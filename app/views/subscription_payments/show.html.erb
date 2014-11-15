@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subscription payment:</strong>
+  <%= @subscription_payment.subscription_payment_id %>
+</p>
+
+<p>
+  <strong>Subscription:</strong>
+  <%= @subscription_payment.subscription %>
+</p>
+
+<p>
+  <strong>Amount paid:</strong>
+  <%= @subscription_payment.amount_paid %>
+</p>
+
+<p>
+  <strong>Date paid:</strong>
+  <%= @subscription_payment.date_paid %>
+</p>
+
+<p>
+  <strong>Good till:</strong>
+  <%= @subscription_payment.good_till %>
+</p>
+
+<p>
+  <strong>Paypal:</strong>
+  <%= @subscription_payment.paypal %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @subscription_payment.notes %>
+</p>
+
+<%= link_to 'Edit', edit_subscription_payment_path(@subscription_payment) %> |
+<%= link_to 'Back', subscription_payments_path %>

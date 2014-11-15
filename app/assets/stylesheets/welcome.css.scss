@@ -1,0 +1,61 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+    background-color:#996633;
+    font-weight:bolder;
+    color:white;
+    text-align:center;
+    padding:5px; 
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: white;
+    margin: 0px 0px 10px 10px
+}
+.headingLine { 
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+
+
+nav {
+    line-height:40px;
+    background-color:#DCDCDC;
+    height:600px;
+    width:210px;
+    float:left;
+    padding:3px;
+    border: 2px;
+    border-radius: 15px;
+    margin: 0px 10px 10px 10px; 
+}
+
+nav a {
+  color:black;
+  text-color:blue;
+  font-weight:bolder;	
+  background-color:#E6EBE6;
+  border-radius: 5px;
+  text-decoration: none;
+  padding:4px;
+}
+
+section {
+    width:900px;
+    float:left;
+    padding:10px; 
+   text-align:justify;
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}

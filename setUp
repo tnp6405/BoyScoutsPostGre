@@ -1,0 +1,24 @@
+Install MySQL.
+Install mysql2 gem and rails_admin gem.
+Already required files : scaffoldOrder, loadFile, database.yml, index.html.erb(welcome/index)
+
+Installing mysql2 gem : 1. sudo apt-get install libmysqlclient-dev //installs mysql
+			2. gem install mysql2 //installs gem
+
+Installing rails_admin : 1. gem install rails_admin
+				
+1. Run the command "rails new BoyScouts -d mysql2"
+2. Replace config/database.yml file with the correct one.
+3. Add the following line to GemFile :
+	gem 'rails_admin', '~> 0.6.5'
+4. Run the scaffold order file.
+5. Disable creating the id as primary in each of the model by adding the following after the model name {:id=>false} in migrations file. "comma" should be spearting this and the model name.
+6. Run the command rake db:migrate
+7. LOAD DATA into Database using the loadFile
+8. replace the views/welcome/index... with the one given
+9. Add action showRunSheets to Routes controller. or copy the following routes_controller.rb file.
+10. Add following line to rails config/routes.rb before the resource:routes get "/routes/showRunSheets" (adding at any other place will not work)
+11. change the root to point to welcome/index in config/routes.rb uncomment the "root welcom/index" line
+12. Run the command to install rails_admin(GEm already added at step 3. So all set). rails g rails_admin:install
+13. Close any existing server and run "rails server"
+

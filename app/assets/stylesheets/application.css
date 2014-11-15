@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background:#DDEEEE;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+    background-color:#DDEEEE;
+    border: solid 1px #336B6B;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #336B6B;
+    color: #333;
+    padding: 4px;
+    text-shadow: 1px 1px 1px #fff;
+    background-color : #fff
+}
+.zui-table-zebra tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+.zui-table-zebra tbody tr:nth-child(even) {
+    background-color: #EEF7EE;
+}
+
+/*.zui-table-horizontal tbody td {
+    border-left: none;
+    border-right: none;
+}*/
+.headingLine { 
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+ 
+.formLine { 
+    display: block;
+    width:"33%";	
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    //margin-left: auto;
+    //margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+}
+nav {
+    line-height:40px;
+    background-color:#DCDCDC;
+    height:600px;
+    width:210px;
+    float:left;
+    padding:3px;
+    border: 2px;
+    border-radius: 15px;
+    margin: 0px 10px 10px 10px; 
+}
+
+.nav1 {
+    line-height:40px;
+    background-color:#DCDCDC;
+    height:100px;
+    width:600px;
+    float:left;
+    padding:3px;
+    border: 2px;
+    border-radius: 15px;
+    margin: 0px 10px 10px 10px; 
+}
+
+.p1{
+  color:black;
+  text-color:blue;
+  font-weight:bolder;	
+  background-color:#E6EBE6;
+  border-radius: 5px;
+  text-decoration: none;
+  padding:4px;
+  height:25px;
+  width:730px;
+}

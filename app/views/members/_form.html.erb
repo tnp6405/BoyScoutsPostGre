@@ -1,0 +1,49 @@
+<%= form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :member_id %><br>
+    <%= f.text_field :member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :member_last_name %><br>
+    <%= f.text_field :member_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :member_first_name %><br>
+    <%= f.text_field :member_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :member_cell %><br>
+    <%= f.text_field :member_cell %>
+  </div>
+  <div class="field">
+    <%= f.label :member_landline %><br>
+    <%= f.text_field :member_landline %>
+  </div>
+  <div class="field">
+    <%= f.label :member_email %><br>
+    <%= f.text_field :member_email %>
+  </div>
+  <div class="field">
+    <%= f.label :memberInactive %><br>
+    <%= f.check_box :memberInactive %>
+  </div>
+  <div class="field">
+    <%= f.label :member_vehicle %><br>
+    <%= f.text_field :member_vehicle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

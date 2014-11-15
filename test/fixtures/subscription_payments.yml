@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subscription_payment_id: 
+  subscription_id: 
+  amount_paid: 9.99
+  date_paid: 2014-10-23 19:37:36
+  good_till: 2014-10-23 19:37:36
+  paypal: false
+  notes: MyText
+
+two:
+  subscription_payment_id: 
+  subscription_id: 
+  amount_paid: 9.99
+  date_paid: 2014-10-23 19:37:36
+  good_till: 2014-10-23 19:37:36
+  paypal: false
+  notes: MyText

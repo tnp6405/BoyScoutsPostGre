@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Run:</strong>
+  <%= @run.run_id %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @run.route %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @run.member %>
+</p>
+
+<p>
+  <strong>Run date:</strong>
+  <%= @run.run_date %>
+</p>
+
+<p>
+  <strong>Time taken:</strong>
+  <%= @run.time_taken %>
+</p>
+
+<p>
+  <strong>Am pm:</strong>
+  <%= @run.am_pm %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @run.notes %>
+</p>
+
+<%= link_to 'Edit', edit_run_path(@run) %> |
+<%= link_to 'Back', runs_path %>

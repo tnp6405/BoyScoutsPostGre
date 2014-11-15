@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subscription_id: 
+  route_id: 
+  run_sequence: 1
+  number: MyString
+  street: MyString
+  qty: 1
+  qty_comp: 1
+  service_notes: MyText
+  last_name: MyString
+  first_name: MyString
+  phone_number: MyString
+  email: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  started_date: 2014-10-23 19:37:24
+  last_letter_sent_date: 2014-10-23 19:37:24
+  renewal_x0020_grp: MyString
+  sold_x0020_By: MyString
+  subscription_amount: 9.99
+  maint: MyString
+  subscription_notes: MyText
+  renewal_due_date: 2014-10-23 19:37:24
+  subscription_status: MyString
+  alternative_invoice: 1
+  map_date: 2014-10-23 19:37:24
+
+two:
+  subscription_id: 
+  route_id: 
+  run_sequence: 1
+  number: MyString
+  street: MyString
+  qty: 1
+  qty_comp: 1
+  service_notes: MyText
+  last_name: MyString
+  first_name: MyString
+  phone_number: MyString
+  email: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  started_date: 2014-10-23 19:37:24
+  last_letter_sent_date: 2014-10-23 19:37:24
+  renewal_x0020_grp: MyString
+  sold_x0020_By: MyString
+  subscription_amount: 9.99
+  maint: MyString
+  subscription_notes: MyText
+  renewal_due_date: 2014-10-23 19:37:24
+  subscription_status: MyString
+  alternative_invoice: 1
+  map_date: 2014-10-23 19:37:24

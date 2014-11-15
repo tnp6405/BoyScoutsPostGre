@@ -1,0 +1,59 @@
+<head>
+
+<style type="text/css">
+	.page {
+  	overflow: visible;
+  	float: none;
+        clear: both;
+ 	page-break-before: always;
+	display: block;
+	}
+        
+        .p1{
+	}
+</style>
+</head>
+<h1><h1>
+<% @routesHash.each_key do |key|%>
+
+<div>
+<% count=0 %>
+<p class="p1">Route :<%= key%>    </p>
+<p class="p1"> Morning Drive :&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Evening Driver :                  </p>
+<p class="p1">Morning start time : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                          Evening start time :            </p>
+	<table class="zui-table zui-table-zebra zui-table-horizontal ">
+  <thead>
+    <tr>
+      <th>Seq</th>
+      <th>Status</th>
+      <th>Street</th>
+      <th>#</th>
+      <th>Name</th>
+      <th>Service Notes</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @routesHash[key].each do |subs| %>
+      <tr>
+        <td><%= subs.run_sequence %></td>
+        <td><%= subs.subscription_status %></td>
+        <td><%= subs.street %></td>
+        <td><%= subs.qty %></td>
+        <td><%= subs.last_name%></td>
+        <td><%= subs.subscription_notes%></td>
+        <td><%= subs.subscription_id%></td>
+      </tr>
+      <% count=count+1 %>		
+    <% end %>
+    
+  </tbody>
+</table>
+<p class="p1">Morning end time : &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                          Evening end time :            </p>
+<p class="p1">Morning Scouts(List on back) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       Evening Scouts(List on back)</p>
+</div>
+<div class="page" style="page-break-before:always float:none overflow:visibility display:table clear:both"></
+
+<%end%>
+

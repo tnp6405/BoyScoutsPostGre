@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_id: 
+  member_id: 
+  activity_date: 2014-10-23 19:37:17
+  activity_ampm: MyString
+  activity_type: MyString
+  activity_unit_count: 1
+
+two:
+  activity_id: 
+  member_id: 
+  activity_date: 2014-10-23 19:37:17
+  activity_ampm: MyString
+  activity_type: MyString
+  activity_unit_count: 1

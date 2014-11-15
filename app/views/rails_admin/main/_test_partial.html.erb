@@ -1,0 +1,6 @@
+<select data-enumeration="true" id="subscription_payment_subscription" name="subscription_payment[subscription]" placeholder="Search"><option value=""></option>
+    <% Subscription.all.each do |t| %>
+        <option value="<%= t.subscription_id %>"><%= "#{t.subscription_id}, #{t.street}, #{t.last_name}, #{t.first_name}" %></option>
+    <% end %></select>
+    <a class="btn btn-info create" id="newSub" data-link="/admin/subscription/new?modal=true" href="/admin/subscription/new?modal=true" style="margin-left:10px">Add a new subscription</a>
+    <a class="btn btn-info update disabled" "data-link="/admin/subscription/__ID__/edit?modal=true" href="/admin/subscription/__ID__/edit?modal=true" style="margin-left:10px"><i class="icon-white"></i> Edit this Subscription</a>

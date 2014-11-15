@@ -1,0 +1,75 @@
+<h1>Listing subscriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subscription</th>
+      <th>Route</th>
+      <th>Run sequence</th>
+      <th>Number</th>
+      <th>Street</th>
+      <th>Qty</th>
+      <th>Qty comp</th>
+      <th>Service notes</th>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Started date</th>
+      <th>Last letter sent date</th>
+      <th>Renewal x0020 grp</th>
+      <th>Sold x0020 by</th>
+      <th>Subscription amount</th>
+      <th>Maint</th>
+      <th>Subscription notes</th>
+      <th>Renewal due date</th>
+      <th>Subscription status</th>
+      <th>Alternative invoice</th>
+      <th>Map date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscriptions.each do |subscription| %>
+      <tr>
+        <td><%= subscription.subscription_id %></td>
+        <td><%= subscription.route %></td>
+        <td><%= subscription.run_sequence %></td>
+        <td><%= subscription.number %></td>
+        <td><%= subscription.street %></td>
+        <td><%= subscription.qty %></td>
+        <td><%= subscription.qty_comp %></td>
+        <td><%= subscription.service_notes %></td>
+        <td><%= subscription.last_name %></td>
+        <td><%= subscription.first_name %></td>
+        <td><%= subscription.phone_number %></td>
+        <td><%= subscription.email %></td>
+        <td><%= subscription.city %></td>
+        <td><%= subscription.state %></td>
+        <td><%= subscription.zip %></td>
+        <td><%= subscription.started_date %></td>
+        <td><%= subscription.last_letter_sent_date %></td>
+        <td><%= subscription.renewal_x0020_grp %></td>
+        <td><%= subscription.sold_x0020_By %></td>
+        <td><%= subscription.subscription_amount %></td>
+        <td><%= subscription.maint %></td>
+        <td><%= subscription.subscription_notes %></td>
+        <td><%= subscription.renewal_due_date %></td>
+        <td><%= subscription.subscription_status %></td>
+        <td><%= subscription.alternative_invoice %></td>
+        <td><%= subscription.map_date %></td>
+        <td><%= link_to 'Show', subscription %></td>
+        <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
+        <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subscription', new_subscription_path %>

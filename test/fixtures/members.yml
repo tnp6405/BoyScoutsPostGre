@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  member_id: 
+  member_last_name: MyString
+  member_first_name: MyString
+  member_cell: MyString
+  member_landline: MyString
+  member_email: MyString
+  memberInactive: false
+  member_vehicle: MyString
+
+two:
+  member_id: 
+  member_last_name: MyString
+  member_first_name: MyString
+  member_cell: MyString
+  member_landline: MyString
+  member_email: MyString
+  memberInactive: false
+  member_vehicle: MyString
