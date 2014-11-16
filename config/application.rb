@@ -8,7 +8,7 @@ require 'csv'
 Bundler.require(*Rails.groups)
 
 PDFKit.configure do |config|
-  config.wkhtmltopdf = "#{Rails.root}/bin/wkhtmltopdf-i386"
+  config.wkhtmltopdf = "#{Rails.root}/bin/wkhtmltopdf-amd64"
   config.default_options = {
     :encoding=>"UTF-8",
     :page_size=>"A4",
