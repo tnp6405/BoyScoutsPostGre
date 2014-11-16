@@ -10,6 +10,7 @@ Bundler.require(*Rails.groups)
 PDFKit.configure do |config|
   config.wkhtmltopdf = "#{Rails.root}/bin/wkhtmltopdf-amd64"
   config.default_options = {
+    :print_media_type=>true,
     :encoding=>"UTF-8",
     :page_size=>"A4",
     :margin_top=>"0.25in",

@@ -9,6 +9,7 @@ PDFKit.configure do |config|
   end
  
   config.default_options = {
+    :print_media_type=>true,
     :encoding=>"UTF-8",
     :page_size=>"A4",
     :margin_top=>"0.25in",
