@@ -35,7 +35,7 @@ gem 'rails_admin', '~> 0.6.5'
 gem 'pdfkit'
 
 #gem for wkhtmlpdf
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
