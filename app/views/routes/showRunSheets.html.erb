@@ -117,7 +117,8 @@ Index<br>
 <h1>RUN SHEETS<h1>
 <hr class="headingLine">
 <% @routesHash.each_key do |key|%>
-<p class="p1">Route :<%= key%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to "    Download PDF",{:controller =>'routes', :action => 'generatePDFForRunSheets', :route => key, :format => :pdf, :filename => "Route_#{key}_RunSheet.pdf"}, target: '_blank' %>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<p class="p1">Route :<%= key%>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= link_to "    Download PDF",{:controller =>'routes', :action => 'generatePDFForRunSheets', :route => key, :format => :pdf, :filename => "Route_#{key}_RunSheet.pdf"}, target: '_blank' %>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<%= link_to  "Download CSV", {:controller=>'routes', :action=>"generateCSVForRunSheets", :route=>"#{key}"}%> 
 </p>
 <!-- <p class="p1"> Morning Drive : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Evening Driver :                  </p>
 <p class="p1">Morning start time :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                          Evening start time :            </p>-->
